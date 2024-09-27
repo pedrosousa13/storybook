@@ -8,7 +8,6 @@ export default defineWorkspace([
   // This is the path to your existing Vitest config file
   './vitest.config.ts',
   {
-    name: 'storybook',
     // This is the path to your existing Vite config file
     extends: './vite.config.ts',
     plugins: [
@@ -20,6 +19,7 @@ export default defineWorkspace([
       // storybookNextjsPlugin(),
     ],
     test: {
+      name: 'storybook',
       // Glob pattern to find story files
       include: ['src/**/*.stories.?(m)[jt]s?(x)'],
       // Enable browser mode
